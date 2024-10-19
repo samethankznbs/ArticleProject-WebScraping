@@ -1,0 +1,91 @@
+﻿<style>
+    body {
+        background-color: sandybrown;
+    }
+
+    h3 {
+        color: wheat;
+        font-size: 35px;
+    }
+
+    .sidebar a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #000;
+        display: block;
+    }
+
+        .sidebar a:hover {
+            background-color: sandybrown; /* Fare üstüne gelindiğinde arka plan rengi */
+        }
+
+    h1 {
+        color: wheat; /* Başlık rengi */
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin-left: 400px;
+        margin-top: 50px;
+        font-size: 50px;
+    }
+
+    h2 {
+        color: wheat;
+    }
+
+
+
+    label {
+        display: block;
+        width: 600px;
+        margin-bottom: 30px;
+        color: wheat;
+    }
+
+    .button-background {
+        margin-top: 70px;
+        width: 350px;
+        height: 500px;
+        background-image: url('https://i.pinimg.com/474x/2b/8e/c7/2b8ec79c3c2089327341d3d9fd132116.jpg');
+        background-size: cover;
+        background-position: top;
+        /* Yuvarlak bir arka plan oluşturmak için */
+        flex-shrink: 0; /* Boyutun küçülmemesini sağla */
+    }
+
+    input[type="submit"] {
+        width: 600px; /* Genişlik */
+        height: 40px; /* Yükseklik */
+        background-color: wheat; /* Arka plan rengi */
+        color: black; /*Yazı rengi */
+        border: none; /* Kenarlık olmadan */
+        border-radius: 5px; /* Kenar yuvarlama */
+        cursor: pointer; /* Fare üzerine gelince işaretçi tipi */
+        margin-top: 10px; /* Butonlar arası boşluk */
+        font-size: 16px; /* Yazı boyutu */
+    }
+
+
+        input[type="submit"]:hover {
+            background-color: white; /* Hover rengi */
+        }
+</style>
+
+<div>
+    <h2>Article Card İçerikleri: </h2>
+    @foreach (var content in ViewBag.ArticleCardContents)
+    {
+
+        <div class="article-card">@Html.Raw(content)</div>
+
+    }
+</div>
+
+<div>
+    <h2>Article Card İçerikleri:</h2>
+    @foreach (var content in ViewBag.ArticleCardContents)
+    {
+
+        <div class="article-card">@Html.Raw(content)</div>
+
+    }
+</div>
